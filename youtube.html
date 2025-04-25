@@ -10,46 +10,64 @@
       height: 100%;
       background: url('Logo2.JPG') no-repeat center center fixed;
       background-size: cover;
-      font-family: Arial, sans-serif;
+      font-family: Impact, sans-serif;
+      color: #fff;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 0 60px;
-      box-sizing: border-box;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: nowrap;
     }
 
     .column {
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 20px;
     }
 
-    a {
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
+    .column a {
       text-decoration: none;
-      text-shadow: 2px 2px 4px #000;
+      color: white;
+      font-size: 24px;
+      text-align: center;
+      text-shadow:
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .logo {
+      max-width: 260px;
     }
   </style>
 </head>
 <body>
 
-  <div class="column">
-    <a href="https://www.youtube.com/@TheGorgeousGeorgeShow" target="_blank">@TheGorgeousGeorgeShow</a>
-    <a href="https://www.youtube.com/@StoneColdSteveBahferston" target="_blank">@StoneColdSteveBahferston</a>
-    <a href="https://www.youtube.com/@Americanpirate1723" target="_blank">@Americanpirate1723</a>
-    <a href="https://www.youtube.com/@GGsNegativeBankAccount" target="_blank">@GGsNegativeBankAccount</a>
-  </div>
+  <div class="container">
+    <!-- LEFT SIDE -->
+    <div class="column">
+      <a href="https://www.youtube.com/@TheGorgeousGeorgeShow" target="_blank">THE GORGEOUS GEORGE SHOW</a>
+      <a href="https://www.youtube.com/@StoneColdSteveBahferston" target="_blank">BOSTON SOUL™</a>
+      <a href="https://www.youtube.com/@Americanpirate1723" target="_blank">AMERICAN PIRATE</a>
+      <a href="https://www.youtube.com/@GGsNegativeBankAccount" target="_blank">GEORGE YARID HAS A NEGATIVE BANK ACCOUNT</a>
+    </div>
 
-  <div class="column">
-    <a href="https://www.youtube.com/@GGNegCreditScore" target="_blank">@GGNegCreditScore</a>
-    <a href="https://www.youtube.com/@georgeyaridstillhasanegati9823" target="_blank">@georgeyaridstillhasanegati9823</a>
-    <a href="https://www.youtube.com/@gorgeousgeorgelegacy9857" target="_blank">@gorgeousgeorgelegacy9857</a>
+    <!-- CENTER LOGO -->
+    <img src="GeorgeLogo.PNG" alt="Gorgeous George" class="logo">
+
+    <!-- RIGHT SIDE -->
+    <div class="column">
+      <a href="https://www.youtube.com/@GGNegCreditScore" target="_blank">GEORGE YARID HAS A NEGATIVE CREDIT SCORE</a>
+      <a href="https://www.youtube.com/@georgeyaridstillhasanegati9823" target="_blank">GEORGE YARID STILL HAS A NEGATIVE BANK ACCOUNT</a>
+      <a href="https://www.youtube.com/@gorgeousgeorgelegacy9857" target="_blank">GORGEOUS GEORGE LEGACY</a>
+    </div>
   </div>
 
 </body>
