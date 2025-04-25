@@ -2,73 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>YouTube Links</title>
+  <title>YouTube Channels</title>
   <style>
-body {
-  background: url('Logo2.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  padding: 0px 40px;
-  text-align: center;
-}
-
-
-
-    h1 {
-      margin-bottom: 0px;
-    }
-    ul {
-      list-style: none;
+    body {
+      background: url('Logo2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      font-family: Arial, sans-serif;
       padding: 0;
+      margin: 0;
+      text-align: center;
     }
-    li {
-      margin: 0px 0;
+
+    .header-img {
+      max-width: 500px;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
-    a {
-      color: #00ffcc;
-      text-decoration: none;
-      font-size: 1.2em;
+
+    .link-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding-bottom: 40px;
     }
-    a:hover {
-      text-decoration: underline;
-    }
-    .back {
-      margin-top: 0px;
-      display: block;
-      font-size: 1em;
-      color: #888;
+
+    .link-gallery a img {
+      max-width: 300px;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
- <img src="YTChannels.PNG" alt="YouTube Channels" style="max-width: 500px; margin-bottom: -20px;" />
 
+  <img src="YTChannels.PNG" alt="YouTube Channels" class="header-img" />
 
-  <ul>
+  <div class="link-gallery">
     <a href="https://www.youtube.com/@TheGorgeousGeorgeShow" target="_blank">
-    <img src="TGGS.PNG" alt="The Gorgeous George Show" style="max-width: 300px; border-radius: 10px;">
-  </a>
-   <a href="https://www.youtube.com/@StoneColdSteveBahferston" target="_blank">
-    <img src="BostonSoul.PNG" alt="The Gorgeous George Show" style="max-width: 300px; border-radius: 10px;">
-  </a>
+      <img src="TGGS.PNG" alt="The Gorgeous George Show">
+    </a>
+    <a href="https://www.youtube.com/@StoneColdSteveBahferston" target="_blank">
+      <img src="BostonSoul.PNG" alt="Boston Soul™">
+    </a>
     <a href="https://www.youtube.com/@Americanpirate1723" target="_blank">
-    <img src="AP.PNG" alt="The Gorgeous George Show" style="max-width: 300px; border-radius: 10px;">
-  </a>
+      <img src="AP.PNG" alt="American Pirate">
+    </a>
     <a href="https://www.youtube.com/@GGsNegativeBankAccount" target="_blank">
-    <img src="Negative.PNG" alt="The Gorgeous George Show" style="max-width: 300px; border-radius: 10px;">
-  </a>>
+      <img src="Negative.PNG" alt="George Yarid Bank Account">
+    </a>
     <a href="https://www.youtube.com/@GGNegCreditScore" target="_blank">
-    <img src="NegativeCredit.PNG" alt="The Gorgeous George Show" style="max-width: 300px; border-radius: 10px;">
-  </a>
-     <a href="https://www.youtube.com/@georgeyaridstillhasanegati9823" target="_blank">
-    <img src="StillNegative.PNG" alt="The Gorgeous George Show" style="max-width: 300px; border-radius: 10px;">
-  </a>
-   <a href="https://www.youtube.com/@gorgeousgeorgelegacy9857" target="_blank">
-    <img src="Legacy.PNG" alt="The Gorgeous George Show" style="max-width: 300px; border-radius: 10px;">
-  </a>
-  </ul>
+      <img src="NegativeCredit.PNG" alt="George Yarid Credit Score">
+    </a>
+    <a href="https://www.youtube.com/@georgeyaridstillhasanegati9823" target="_blank">
+      <img src="StillNegative.PNG" alt="Still Negative Account">
+    </a>
+    <a href="https://www.youtube.com/@gorgeousgeorgelegacy9857" target="_blank">
+      <img src="Legacy.PNG" alt="Gorgeous George Legacy">
+    </a>
+  </div>
 
-  <a class="back" href="index.html">← Back to Home</a>
 </body>
 </html>
