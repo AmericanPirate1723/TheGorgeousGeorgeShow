@@ -7,20 +7,24 @@
     html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
       background: url('TGGS.jpg') no-repeat center center fixed;
       background-size: cover;
       font-family: Impact, Arial, sans-serif;
       color: white;
-      text-align: center;
-      height: 100%;
       overflow-x: hidden;
     }
 
-    /* Logo at the top like a regular header */
+    /* Fixed logo at the top */
     .top-logo {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
       width: 100%;
-      padding: 20px 0;
       background: rgba(0, 0, 0, 0.5);
+      padding: 10px 0;
+      z-index: 1000;
     }
 
     .top-logo img {
@@ -28,18 +32,20 @@
       height: auto;
     }
 
-    /* Main content area */
+    /* Fixed video and slideshow under the logo */
     .page-content {
+      position: fixed;
+      top: 100px; /* enough space under the logo */
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       gap: 50px;
-      flex-wrap: wrap;
-      margin-top: 50px;
-      margin-bottom: 150px;
+      z-index: 999;
     }
 
-    /* Video and slideshow same size */
+    /* Video and slideshow boxes */
     .video-box, .slideshow {
       width: 500px;
       height: 300px;
@@ -79,7 +85,7 @@
       justify-content: center;
       gap: 30px;
       align-items: center;
-      z-index: 999;
+      z-index: 1000;
     }
 
     .bottom-links img {
@@ -97,19 +103,19 @@
 
 <body>
 
-  <!-- Normal top logo -->
+  <!-- Fixed Top Logo -->
   <div class="top-logo">
     <img src="Logo.PNG" alt="The Gorgeous George Show Logo">
   </div>
 
-  <!-- Main page content -->
+  <!-- Fixed Video and Slideshow -->
   <div class="page-content">
-    <!-- Left side: Video -->
+    <!-- Left: Video -->
     <div class="video-box">
       <video src="Pathetic.mp4" controls muted></video>
     </div>
 
-    <!-- Right side: Slideshow -->
+    <!-- Right: Slideshow -->
     <div class="slideshow">
       <img src="Slide1.JPG" class="active" alt="Slide 1">
       <img src="Slide2.JPG" alt="Slide 2">
@@ -117,7 +123,7 @@
     </div>
   </div>
 
-  <!-- Bottom fixed link images -->
+  <!-- Bottom fixed links -->
   <div class="bottom-links">
     <a href="https://www.youtube.com/@TheGorgeousGeorgeShow" target="_blank">
       <img src="TGGS.PNG" alt="Gorgeous George Show">
@@ -132,7 +138,7 @@
     </a>
   </div>
 
-  <!-- Slideshow Script -->
+  <!-- Slideshow script -->
   <script>
     let slides = document.querySelectorAll('.slideshow img');
     let currentSlide = 0;
@@ -141,7 +147,7 @@
       slides[currentSlide].classList.remove('active');
       currentSlide = (currentSlide + 1) % slides.length;
       slides[currentSlide].classList.add('active');
-    }, 3000); // Change slide every 3 seconds
+    }, 3000); // change every 3 seconds
   </script>
 
 </body>
