@@ -142,5 +142,47 @@
     }, 3000); // change every 3 seconds
   </script>
 
+  <video id="bg-music" src="Music.mp4" autoplay loop muted playsinline style="display: none;"></video>
+
+<button id="music-toggle" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #00ffcc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+">
+  ▶ Play Music
+</button>
+
+<script>
+  const music = document.getElementById('bg-music');
+  const button = document.getElementById('music-toggle');
+
+  let musicStarted = false;
+
+  button.addEventListener('click', () => {
+    if (!musicStarted) {
+      music.muted = false;
+      music.play();
+      button.textContent = '⏸ Pause Music';
+      musicStarted = true;
+    } else {
+      if (music.paused) {
+        music.play();
+        button.textContent = '⏸ Pause Music';
+      } else {
+        music.pause();
+        button.textContent = '▶ Play Music';
+      }
+    }
+  });
+</script>
+
+
 </body>
 </html>
