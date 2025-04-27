@@ -7,7 +7,7 @@
     html, body {
       margin: 0;
       padding: 0;
-      background: url('TGGS.JPG') no-repeat center center fixed;
+      background: url('TGGS.jpg') no-repeat center center fixed;
       background-size: cover;
       font-family: Impact, Arial, sans-serif;
       color: white;
@@ -16,16 +16,11 @@
       overflow-x: hidden;
     }
 
-    /* Fixed top logo */
+    /* Logo at the top like a regular header */
     .top-logo {
-      position: fixed;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
       width: 100%;
-      padding: 10px 0;
+      padding: 20px 0;
       background: rgba(0, 0, 0, 0.5);
-      z-index: 1000;
     }
 
     .top-logo img {
@@ -33,18 +28,18 @@
       height: auto;
     }
 
-    /* Push page content below fixed logo */
+    /* Main content area */
     .page-content {
-      padding-top: 160px; /* Enough to clear the logo */
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       gap: 50px;
       flex-wrap: wrap;
-      margin-bottom: 120px;
+      margin-top: 50px;
+      margin-bottom: 150px;
     }
 
-    /* Video and slideshow styling (same dimensions) */
+    /* Video and slideshow same size */
     .video-box, .slideshow {
       width: 500px;
       height: 300px;
@@ -102,7 +97,7 @@
 
 <body>
 
-  <!-- Top fixed logo -->
+  <!-- Normal top logo -->
   <div class="top-logo">
     <img src="Logo.PNG" alt="The Gorgeous George Show Logo">
   </div>
