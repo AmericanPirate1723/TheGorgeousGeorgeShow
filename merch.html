@@ -6,15 +6,19 @@
   <style>
     body {
       margin: 0;
-      padding: 20px;
+      padding: 0;
+      background: white;
       font-family: Arial, sans-serif;
-      background: #111;
-      color: #fff;
+      color: black;
       text-align: center;
     }
 
-    h1 {
-      margin-bottom: 40px;
+    header {
+      background: black;
+      color: white;
+      padding: 30px 0;
+      font-size: 28px;
+      font-weight: bold;
     }
 
     .gallery {
@@ -22,35 +26,37 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+      padding: 40px 20px;
     }
 
     .gallery img {
       width: 250px;
       border-radius: 10px;
-      background: #222;
+      background: #f5f5f5;
       padding: 10px;
     }
 
     a.back {
       display: block;
       margin-top: 40px;
-      color: #00ffcc;
+      color: #000;
       font-size: 18px;
       text-decoration: none;
+    }
+
+    a.back:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <h1>Gorgeous George Merch (Coming Soon!)</h1>
+  <header>
+    Gorgeous George Merch (Coming Soon!)
+  </header>
 
   <div class="gallery">
     <img src="Placeholder1.jpg" alt="Future Shirt 1">
     <img src="Placeholder2.jpg" alt="Future Hat 2">
     <img src="Placeholder3.jpg" alt="Future Mug 3">
   </div>
-
-  <a href="index.html" class="back">← Back to Home</a>
-
-</body>
-</html>
