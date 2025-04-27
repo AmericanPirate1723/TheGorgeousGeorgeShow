@@ -33,33 +33,32 @@
       height: auto;
     }
 
-    /* Push page content below logo */
+    /* Push page content below fixed logo */
     .page-content {
-      padding-top: 140px;
+      padding-top: 160px; /* Enough to clear the logo */
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 50px;
       flex-wrap: wrap;
-      margin-bottom: 100px;
+      margin-bottom: 120px;
     }
 
-    /* Video styling */
-    video {
-      width: 400px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 0 10px black;
-    }
-
-    /* Slideshow container */
-    .slideshow {
-      width: 400px;
+    /* Video and slideshow styling (same dimensions) */
+    .video-box, .slideshow {
+      width: 500px;
       height: 300px;
-      overflow: hidden;
-      position: relative;
       border-radius: 10px;
+      overflow: hidden;
       box-shadow: 0 0 10px black;
+      background: #000;
+      position: relative;
+    }
+
+    .video-box video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .slideshow img {
@@ -111,7 +110,9 @@
   <!-- Main page content -->
   <div class="page-content">
     <!-- Left side: Video -->
-    <video src="Pathetic.mp4" controls></video>
+    <div class="video-box">
+      <video src="Pathetic.mp4" controls muted></video>
+    </div>
 
     <!-- Right side: Slideshow -->
     <div class="slideshow">
@@ -121,7 +122,7 @@
     </div>
   </div>
 
-  <!-- Bottom fixed links -->
+  <!-- Bottom fixed link images -->
   <div class="bottom-links">
     <a href="https://www.youtube.com/@TheGorgeousGeorgeShow" target="_blank">
       <img src="TGGS.PNG" alt="Gorgeous George Show">
