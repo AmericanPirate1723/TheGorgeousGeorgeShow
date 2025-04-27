@@ -7,7 +7,7 @@
     html, body {
       margin: 0;
       padding: 0;
-      background: url('TGGS.jpg') no-repeat center center fixed;
+      background: url('TGGS.JPG') no-repeat center center fixed;
       background-size: cover;
       font-family: Impact, Arial, sans-serif;
       color: white;
@@ -15,9 +15,16 @@
       height: 100%;
     }
 
-    /* Logo at the top */
+    /* Fixed header logo */
     .top-logo {
-      margin-top: 30px;
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      padding: 10px 0;
+      background: rgba(0, 0, 0, 0.5); /* optional: a slight transparent background */
+      z-index: 1000;
     }
 
     .top-logo img {
@@ -25,7 +32,12 @@
       height: auto;
     }
 
-    /* Bottom image links style */
+    /* Push content down so it's not under the logo */
+    .page-content {
+      padding-top: 120px; /* leaves space for the fixed logo */
+    }
+
+    /* Bottom fixed link images */
     .bottom-links {
       position: fixed;
       bottom: 20px;
@@ -34,6 +46,7 @@
       justify-content: center;
       gap: 30px;
       align-items: center;
+      z-index: 999;
     }
 
     .bottom-links img {
@@ -51,14 +64,14 @@
 
 <body>
 
-  <!-- Top logo -->
+  <!-- Top fixed logo -->
   <div class="top-logo">
     <img src="Logo.PNG" alt="The Gorgeous George Show Logo">
   </div>
 
-  <!-- Your main page content (if any) goes here -->
-  <div style="padding-top: 40px;">
-    <!-- Headers, links, anything else you want here -->
+  <!-- Main page content -->
+  <div class="page-content">
+    <!-- Any headers, YouTube links, gallery promos, etc. go here -->
   </div>
 
   <!-- Bottom fixed link images -->
