@@ -9,63 +9,55 @@
       padding: 0;
       background: url('Logo2.JPG') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
       font-family: Impact, Arial, sans-serif;
       color: white;
       text-align: center;
+      height: 100%;
     }
 
-    /* All linked images (like TGGS.PNG and GGmerch.JPG) */
-    a img {
-      width: 220px;
+    /* Style for bottom image links */
+    .bottom-links {
+      position: fixed;
+      bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .bottom-links img {
+      width: 150px;
       height: auto;
       border-radius: 10px;
       transition: transform 0.3s ease;
     }
 
-    /* Text links */
-    a {
-      color: white;
-      font-size: 22px;
-      text-decoration: none;
-      text-shadow:
-        -2px -2px 0 #000,
-         2px -2px 0 #000,
-        -2px  2px 0 #000,
-         2px  2px 0 #000;
-      transition: transform 0.3s ease;
-    }
-
-    /* Hover effects */
-    a:hover img, a:hover {
+    .bottom-links img:hover {
       transform: scale(1.08);
-      text-decoration: underline;
-    }
-
-    /* Merch store button container */
-    .merch-button {
-      margin-top: 80px;
-      margin-bottom: 40px;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Your top content / logo / links go here -->
-  <div style="margin-top: 60px;">
-    <a href="https://www.youtube.com/@TheGorgeousGeorgeShow" target="_blank">
-      <img src="TGGS.PNG" alt="The Gorgeous George Show">
-    </a>
+  <!-- Your original page content stays here -->
+  <div style="padding-top: 100px;">
+    <!-- Any headers, logos, YouTube links, etc. you already had -->
   </div>
 
-  <!-- Add more image links or text links here if you want -->
+  <!-- Bottom fixed links -->
+  <div class="bottom-links">
+    <a href="https://www.youtube.com/@TheGorgeousGeorgeShow" target="_blank">
+      <img src="TGGS.PNG" alt="Gorgeous George Show">
+    </a>
 
-  <!-- Merch Store Button at the Bottom -->
-  <div class="merch-button">
     <a href="merch.html">
-      <img src="GGmerch.JPG" alt="Visit Merch Store">
+      <img src="GGmerch.PNG" alt="Visit Merch Store">
+    </a>
+
+    <a href="gallery.html">
+      <img src="Photo.PNG" alt="Photo Gallery">
     </a>
   </div>
 
