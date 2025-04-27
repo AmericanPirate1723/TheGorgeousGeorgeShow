@@ -1,176 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>The Gorgeous George Show</title>
   <style>
-  a img, a {
-    transition: transform 0.3s ease;
-  }
-
-  a:hover img, a:hover {
-    transform: scale(1.08);
-  }
-</style>
-
-  <style>
-
-  body {
-  font-family: Arial, sans-serif;
-  background: url('TGGS.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #f2f2f2;
-  margin: 0;
-  padding: 0;
-}
-
-    header {
-      background-color: #222;
-      padding: 30px 20px;
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: url('Logo2.JPG') no-repeat center center fixed;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: Impact, Arial, sans-serif;
+      color: white;
       text-align: center;
     }
-    header img {
-      max-width: 300px;
-      width: 100%;
+
+    /* All linked images (like TGGS.PNG and GGmerch.JPG) */
+    a img {
+      width: 220px;
       height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
     }
-    h2 {
-      font-size: 1.2em;
-      font-weight: normal;
-      margin-top: 10px;
-      color: #aaa;
-    }
-    .video-section, .photo-gallery, .merch-link {
-      padding: 40px 20px;
-      text-align: center;
-      
-</a>
 
-    }
-    iframe {
-      width: 80%;
-      height: 400px;
-      max-width: 800px;
-      border: none;
-    }
-    .photo-gallery img {
-      max-width: 200px;
-      margin: 10px;
-      border-radius: 5px;
-    }
-    .merch-link a {
-      color: #00ffcc;
-      font-size: 1.5em;
+    /* Text links */
+    a {
+      color: white;
+      font-size: 22px;
       text-decoration: none;
+      text-shadow:
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000;
+      transition: transform 0.3s ease;
     }
-    footer {
-      background-color: #222;
-      text-align: center;
-      padding: 20px;
-      color: #666;
+
+    /* Hover effects */
+    a:hover img, a:hover {
+      transform: scale(1.08);
+      text-decoration: underline;
+    }
+
+    /* Merch store button container */
+    .merch-button {
+      margin-top: 80px;
+      margin-bottom: 40px;
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <img src="Logo.PNG" alt="Gorgeous George Show Logo" />
-  </header>
+  <!-- Your top content / logo / links go here -->
+  <div style="margin-top: 60px;">
+    <a href="https://www.youtube.com/@TheGorgeousGeorgeShow" target="_blank">
+      <img src="TGGS.PNG" alt="The Gorgeous George Show">
+    </a>
+  </div>
 
-  <section class="video-section">
-  <h2>The Most Pathetic Man in the World</h2>
-  <video width="80%" controls>
-    <source src="Pathetic.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</section>
+  <!-- Add more image links or text links here if you want -->
 
-  }
-
-  a:hover img {
-    transform: scale(1.08);
-  }
-</style>
-
-  <style>
-  a img {
-    width: 220px;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-  }
-
-  a:hover img {
-    transform: scale(1.08);
-  }
-</style>
-
-
-  
- <a href="youtube.html">
-  <img src="YouTube.PNG" alt="YouTube Channels" style="max-width: 250px; border-radius: 10px;" />
-</a>
-
-
-  <a href="gallery.html">
-    <img src="Photo.PNG" alt="Go to Photo Gallery" style="max-width: 250px; border-radius: 10px;" />
-  </a>
-
-  <div style="width: 100%; text-align: center; margin-top: 80px; margin-bottom: 20px;">
-  <a href="merch.html">
-    <img src="GGmerch.PNG" alt="Visit Merch Store" style="max-width: 200px; border-radius: 10px;">
-  </a>
-</div>
-
-</div>
-
-  <footer>
-    &copy; 2025 The Gorgeous George Show. All rights reserved.
-  </footer>
-<video id="bg-music" src="Saxophone.mp4" autoplay loop muted playsinline style="display: none;"></video>
-
-<button id="music-toggle" style="
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 15px;
-  font-size: 16px;
-  background-color: #00ffcc;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 1000;
-">
-  ▶ Play Music
-</button>
-
-<script>
-  const music = document.getElementById('bg-music');
-  const button = document.getElementById('music-toggle');
-
-  let musicStarted = false;
-
-  button.addEventListener('click', () => {
-    if (!musicStarted) {
-      music.muted = false;
-      music.play();
-      button.textContent = '⏸ Pause Music';
-      musicStarted = true;
-    } else {
-      if (music.paused) {
-        music.play();
-        button.textContent = '⏸ Pause Music';
-      } else {
-        music.pause();
-        button.textContent = '▶ Play Music';
-      }
-    }
-  });
-</script>
-
-
-
+  <!-- Merch Store Button at the Bottom -->
+  <div class="merch-button">
+    <a href="merch.html">
+      <img src="GGmerch.JPG" alt="Visit Merch Store">
+    </a>
+  </div>
 
 </body>
 </html>
