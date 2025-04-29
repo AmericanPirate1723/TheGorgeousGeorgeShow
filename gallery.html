@@ -21,11 +21,11 @@
     }
 
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       padding: 40px 20px;
+      justify-items: center;
     }
 
     .gallery img {
@@ -53,7 +53,7 @@
       text-decoration: underline;
     }
 
-    /* Lightbox styles */
+    /* Lightbox */
     .lightbox {
       position: fixed;
       top: 0; left: 0;
@@ -81,9 +81,9 @@
   <div class="gallery">
     <img src="Alpha Mate.jpeg" alt="Gallery Image 1">
     <img src="Cuck Hogan.jpeg" alt="Gallery Image 2">
-    <img src="EasterGG.jpeg" alt="Gallery Image 3">
+    <img src="EasterGG" alt="Gallery Image 3">
     <img src="Gallery4.JPG" alt="Gallery Image 4">
-    <!-- Add or remove more images here -->
+    <!-- Add more images as needed -->
   </div>
 
   <a href="index.html" class="back">← Back to Home</a>
