@@ -29,11 +29,12 @@
     }
 
     .gallery img {
-      width: 300px;
+      max-width: 100%;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
     .gallery img:hover {
@@ -51,6 +52,26 @@
     a.back:hover {
       text-decoration: underline;
     }
+
+    /* Lightbox styles */
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      display: none;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px black;
+    }
   </style>
 </head>
 <body>
@@ -60,15 +81,33 @@
   <div class="gallery">
     <img src="Alpha Mate.jpeg" alt="Gallery Image 1">
     <img src="Cuck Hogan.jpeg" alt="Gallery Image 2">
-    <img src="Shocker.jpeg" alt="Gallery Image 3">
-    <img src="EasterGG.jpeg" alt="Gallery Image 4">
-    <img src="Family1.jpeg" alt="Gallery Image 5">
-    <img src="GAY UNIT.jpeg" alt="Gallery Image 6">
-    <img src="GG Friday Nights.jpeg" alt="Gallery Image 7">
-    <!-- Add or remove <img> tags as needed -->
+    <img src="EasterGG.jpeg" alt="Gallery Image 3">
+    <img src="Gallery4.JPG" alt="Gallery Image 4">
+    <!-- Add or remove more images here -->
   </div>
 
   <a href="index.html" class="back">← Back to Home</a>
+
+  <!-- Lightbox element -->
+  <div class="lightbox" id="lightbox">
+    <img id="lightbox-img" src="" alt="Expanded Image">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
 
 </body>
 </html>
